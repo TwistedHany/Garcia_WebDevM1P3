@@ -12,9 +12,9 @@
     <header>
         <a href="#" class="logo">Hany</a>
         <nav id="menu">
-            <a href="#aboutme" class="active">About Me</a>
+            <a href="#about" class="active">About Me</a>
             <a href="#projects">Projects</a>
-            <a href="#">Recognition</a>
+            <a href="#recognition">Recognition</a>
         </nav>
     </header>
 
@@ -52,7 +52,7 @@
                         <img src="/IMAGE/Flork128.jpg" alt="Order Taker">
                     </div>
                     <div class="proj-title">
-                        <h3><a href="Torta.html">Order Taker</a></h3>
+                        <button class="modal-btn" data-title="Order Taker" data-description="A web-based order management system for restaurants." data-github="https://github.com/your-repo/order-taker">Order Taker</button>
                     </div>
                 </div>
     
@@ -61,7 +61,7 @@
                         <img src="/IMAGE/Florkcool.png" alt="Employee Management">
                     </div>
                     <div class="proj-title">
-                        <h3><a href="#">Employee Management System</a></h3>
+                        <button class="modal-btn" data-title="Employee Management System" data-description="A system for managing employee records and payroll." data-github="https://github.com/TwistedHany/Employee-Management">Employee Management System</button>
                     </div>
                 </div>
     
@@ -70,7 +70,7 @@
                         <img src="/IMAGE/Florkdum.png" alt="DishCover">
                     </div>
                     <div class="proj-title">
-                        <h3><a href="GPechay.html">DishCover</a></h3>
+                        <button class="modal-btn" data-title="DishCover" data-description="A recipe and meal planning web application." data-github="https://github.com/your-repo/dishcover">DishCover</button>
                     </div>
                 </div>
     
@@ -79,13 +79,28 @@
                         <img src="/IMAGE/Florkheart.jpg" alt="2nd Term">
                     </div>
                     <div class="proj-title">
-                        <h3><a href="GPechay.html">2nd Term Schedule Table</a></h3>
+                        <button class="modal-btn" data-title="2nd Term Schedule Table" data-description="A scheduling tool for organizing term schedules." data-github="https://github.com/your-repo/schedule-table">2nd Term Schedule Table</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <a id="modal-github" href="#" target="_blank" class="github-btn">View on GitHub</a>
+        </div>
+    </div>
 
+
+    <section class="recognition" id="recognition">
+        <h1 class="heading">Affiliation And Certification</h1>
+    </section>
+
+    <script src="modal_script.js"></script>
 </body>
 </html>
