@@ -12,6 +12,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -32,37 +33,32 @@ header{
     background-color: grey;
     filter: drop-shadow(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
-    font-size: 3rem;
-    color:rgb(178, 34, 34);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
 }
 
-.logo :hover{
-    transform: scale(1.1);
-}
-
-nav a{
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
-
 }
 
-nav a:hover,nav a.active{
-    color:rgb(178, 34, 34);
+nav a:hover, nav a.active {
+    color: rgb(178, 34, 34);
     border-bottom: 3px solid rgb(178, 34, 34);
 }
+
 
 @media(max-width:995px){
     nav{
@@ -279,6 +275,7 @@ section{
 }
 
 /* Modal Styling */
+
 .modal {
     display: none;
     position: fixed;
@@ -290,8 +287,13 @@ section{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal.show {
+    display: block;
+}
+
+
 .modal-content {
-    background-color: white;
+    background-color: rgb(178, 34, 34);
     margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
@@ -357,4 +359,81 @@ section{
 }
 
 
+/* Recognition Section */
+.recognition {
+    padding: 4rem 2rem;
+    background-color: black;
+}
+
+.recognition .heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #000;
+    background: white;
+    width: fit-content;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+}
+
+.recognition-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.recognition-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+
+.recognition-item {
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recognition-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.recognition-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.recognition-image img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recognition-item:hover .recognition-image img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.recognition-title {
+    padding: 1.2rem;
+    text-align: center;
+    background: white;
+}
+
+.recognition-title h3 {
+    font-size: 1.6rem;
+    color: rgb(178, 34, 34);
+    font-family: serif;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
 
