@@ -194,36 +194,36 @@ section{
 
 
 /* Projects */
-.Food {
+.projects  {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: black;
 }
 
-.Food .heading {
+.projects .heading {
     text-align: center;
     font-size: 4rem;
     color: #000;
-    background: beige;
+    background: white;
     width: fit-content;
     margin: 0 auto 3rem auto;
     padding: 1rem 4rem;
     border-radius: 5px;
 }
 
-.foodbox-container {
+.project-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-.foodbox {
+.projbox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2.5rem;
     justify-items: center;
 }
 
-.food-item {
+.proj-item {
     width: 100%;
     background: #fff;
     border-radius: 15px;
@@ -232,72 +232,72 @@ section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.food-item:hover {
+.proj-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.food-image {
+.proj-image {
     width: 100%;
     height: 250px;
     overflow: hidden;
     position: relative;
 }
 
-.food-image img {
+.proj-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.food-item:hover .food-image img {
+.proj-item:hover .food-image img {
     transform: scale(1.1);
 }
 
-.food-title {
+.proj-title {
     padding: 1.2rem;
     text-align: center;
     background: beige;
 }
 
-.food-title h3 {
+.proj-title h3 {
     font-size: 1.3rem;
-    color: #333;
+    color: rgb(178, 34, 34);
     font-family: serif;
     font-weight: 600;
     margin: 0;
     transition: color 0.3s ease;
 }
 
-.food-item:hover .food-title h3 {
+.proj-item:hover .food-title h3 {
     color: #666;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .Food {
+    .proj {
         padding: 3rem 1rem;
     }
 
-    .Food .heading {
+    .proj .heading {
         font-size: 3rem;
         padding: 0.8rem 3rem;
     }
 
-    .foodbox {
+    .projbox {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 2rem;
     }
 }
 
-@media (max-width: 480px) {
-    .foodbox {
+@media (max-width: 480px) { 
+    .projbox {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
-    .food-title h3 {
+    .proj-title h3 {
         font-size: 1.1rem;
     }
 }
